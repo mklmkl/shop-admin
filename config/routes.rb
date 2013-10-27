@@ -1,4 +1,5 @@
 Shop::Application.routes.draw do
+  devise_for :users
   resources :products
   root 'products#index'
   resources :prices
@@ -59,4 +60,11 @@ Shop::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :admin do
+    resources :products
+    root 'products#index'
+
+    resources :categories
+    resources :prices
+  end
 end

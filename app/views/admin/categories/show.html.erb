@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<%= link_to 'Edit', edit_admin_category_path(@category) %> |
+<%= link_to 'Back', admin_categories_path %>
+
+<p>
+  <strong>Example product:</strong>
+<table>
+  <tbody>
+  <% Product.find_by_category_id(@category.id) do |product| %>
+      <tr>
+        <td><%= link_to product.name.to_s, admin_product_path(product) %></td>
+        <td><%= product.price.value %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</p>

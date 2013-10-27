@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Products", admin_products_path %>
+<%= link_to "Categories", admin_categories_path %>
+<%= link_to "Prices", admin_prices_path %>
+<br>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
+<%= yield %>
+
+</body>
+</html>

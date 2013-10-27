@@ -16,7 +16,7 @@
     </data-source>
     <data-source source="LOCAL" name="Rails Shop: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="1684165a-8f56-4932-b72d-eea2dd1f17e6">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/Shop_development</jdbc-url>
+      <jdbc-url>jdbc:postgresql:Shop_development</jdbc-url>
       <user-name>Shop</user-name>
       <user-password>dfc7dfc1dfc6dfc7dfc1dfc6</user-password>
       <libraries>
